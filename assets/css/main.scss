@@ -1,0 +1,12 @@
+/* purgecss start ignore */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+/* purgecss end ignore */
+
+//@import "./_undefined-base.css";
+
+@import "tailwindcss/utilities";
+
+.content p {
+  @apply mb-12;
+}
