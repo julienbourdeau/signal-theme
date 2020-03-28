@@ -1,0 +1,28 @@
+<footer class="site-footer">
+
+  {{#if @site.secondary_navigation}}
+    <nav class="site-footer__navigation" role="navigation">
+      {{navigation type="secondary"}}
+    </nav>
+  {{/if}}
+
+  <small class="site-footer__attribution">
+
+    <span class="site-footer__attribution--copyright">
+      &copy; {{date format="YYYY"}}
+      <a href="{{@site.url}}/">{{@site.title}}</a>
+    </span>&ensp;
+
+    <span class="site-footer__attribution--theme-author">
+      <a href="https://github.com/curiositry/undefined-ghost-theme">Undefined</a>
+      theme by
+      <a href="http://curiositry.github.io">Curiositry</a>
+    </span>&ensp;
+
+    <span class="site-footer__attribution--ghost">
+      Proudly published with <a href="https://ghost.org">Ghost</a>
+    </span>
+
+  </small>
+
+</footer>

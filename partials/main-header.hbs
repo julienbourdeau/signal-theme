@@ -1,0 +1,50 @@
+<header class="main-header" id="main-header">
+<div class="container">
+
+  {{#if @site.logo}}
+    <div class="main-header__logo">
+      <a href="{{@site.url}}">
+        <img src="{{@site.logo}}" alt="{{@site.title}} Logo" />
+      </a>
+    </div>
+  {{/if}}
+
+  <div class="main-header__text-container">
+    <h1 class="main-header__blog-title">
+      <a href="{{@site.url}}">{{@site.title}}</a>
+    </h1>
+    <h3 class="main-header__blog-description">
+      {{@site.description}}
+    </h3>
+  </div>
+
+  <nav>
+    {{navigation}}
+
+    {{#if @labs.members}}
+      {{#if @member}}
+      <ul>
+        <li>
+          <a href="{{@site.url}}/account">Account</a>
+        </li>
+        <li>
+          <button role="link" data-members-signout>Sign out</button>
+        </li>
+      </ul>
+      {{else}}
+      <ul>
+        <li>
+          <a href="{{@site.url}}/signin">Log in</a>
+        </li>
+        <li>
+          <a href="{{@site.url}}/signup">Subscribe</a>
+        </li>
+      </ul>
+      {{/if}}
+    {{/if}}
+  </nav>
+
+  <div hidden class="notification-area" id="notifications">
+  </div>
+</div>
+</header>

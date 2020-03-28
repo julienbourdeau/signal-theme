@@ -1,0 +1,56 @@
+{
+  "name": "signal",
+  "description": "A tailwind minimal theme for tech writer using the Ghost blogging platform",
+  "demo": "http://github.com/julienbourdeau/signal",
+  "version": "0.1.0",
+  "engines": {
+      "ghost": ">=3.11.0",
+      "ghost-api": "v3"
+  },
+  "author": {
+      "name": "julienbourdeau",
+      "email": "julien@sigerr.org",
+      "url": "https://www.sigerr.org"
+  },
+  "config": {
+      "posts_per_page": 5,
+      "image_sizes": {
+            "xs": {
+                "width": 400
+            },
+            "s": {
+                "width": 600
+            },
+            "m": {
+                "width": 800
+            },
+            "l": {
+                "width": 1000
+            },
+            "xl": {
+                "width": 3000
+            }
+        }
+  },
+  "gpm": {
+      "type": "theme",
+      "categories": [
+          "Minimal",
+          "Responsive",
+          "Starter theme",
+          "Boilerplate",
+          "Typographic"
+      ]
+  },
+  "keywords": [
+      "responsive",
+      "ghost",
+      "minimal",
+      "theme",
+      "ghost-theme"
+  ],
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/julienbourdeau/signal.git"
+  }
+}

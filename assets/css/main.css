@@ -1,0 +1,147 @@
+/* Put your styles (or personal collection of CSS frameworks) here */
+
+body {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figcaption {
+  text-align: center;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+
+/* IMAGE WIDTH STYLES */
+/* ================== */
+
+/* Style at will... */
+/* figure.kg-width-full { } */
+/* figure.kg-width-wide { } */
+/*
+PROTIP:
+Try something like as a starting point for centering images that are wider than their parent container's width:
+
+.full-bleed {
+	  width: 100vw;
+	  position: relative;
+	  left: 50%;
+	  right: 50%;
+	  margin-left: -50vw;
+	  margin-right: -50vw;
+	}
+
+For large images that aren't full width, but are larger than their parent, just replace 100vw with your max width (say, 1000px), and then replace the -50vw margins with -{NUM}px / 2 (in this case, -500px). You can see a version of this techinique in action in the stylesheet of my MNML Ghost theme:
+https://github.com/curiositry/mnml-ghost-theme
+*/
+
+/* IMAGE GALLERY STYLES */
+/* ==================== */
+
+/* Style at will... */
+.kg-gallery-card { }
+.kg-gallery-container { }
+.kg-gallery-row { }
+.kg-gallery-image { }
+
+/*
+Docs can be found here: http://themes.ghost.org/docs/ghost-editor#section-gallery-card
+
+The implementation that Ghost recommends is pretty robust, with one caveat: it needs a few lines of JavaScrpt. Example can be found here:
+https://github.com/TryGhost/Casper/pull/475/files#diff-ce5e030f2e2e2a50f18199464f07ea70
+*/
+
+
+/* BOOKMARK CARD STYLES */
+/* ==================== */
+
+/* Style at will... */
+.kg-bookmark-card { }
+.kg-bookmark-container { }
+.kg-bookmark-content { }
+.kg-bookmark-title { }
+.kg-bookmark-description,
+.kg-bookmark-metadata { }
+.kg-bookmark-thumbnail { }
+.kg-bookmark-thumbnail img { }
+.kg-bookmark-icon { }
+.kg-bookmark-author:after { }
+.kg-bookmark-publisher { }
+
+
+/*
+Docs can be found here: https://ghost.org/docs/api/v2/handlebars-themes/editor/#bookmark-card
+
+The example implementation in the Ghost docs isn't bad, although you may want to adjust the image styles a bit.
+
+Want something a bit leaner? You can drop the snippet I used in my premium Weblog theme that right in here! Here it is: https://gist.github.com/curiositry/511c84204f136a97d65cf77a39b230bf
+*/
+
+
+/* SUBSCRIPTION & MEMBERSHIP STYLES */
+/* ================================= */
+
+.notification-area {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: #99ea02;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.billing-cancel .notification-area {
+  background-color: #ccc;
+}
+
+.message-success,
+.message-error {
+  display: none;
+}
+
+.message-error,
+[data-members-error] {
+  color: red;
+}
+
+.message-success {
+  color: green;
+}
+
+.loading button span,
+.error button span,
+.success button span {
+  display: none;
+}
+
+.loading button::after {
+  content: "Loading...";
+}
+
+.error button::after {
+  content: "Error :(";
+}
+
+.success button::after {
+  content: "Success :)";
+}
+
+.success ~ .message-success,
+.invalid ~ .message-error,
+.error ~ .message-error {
+  display: block;
+}
