@@ -5,72 +5,71 @@
 {{#author}}
   <section class="author-profile container">
 
-    {{#if profile_image}}
-      <img class="author-profile__image" src="{{profile_image}}" alt="{{name}}’s profile image" />
-    {{/if}}
+    <div class="flex">
+      <div class="flex-shrink-0 mr-2 sm:mr-8 w-24 sm:w-32 md:w-48">
+        <img class="author-profile__image rounded-full" src="{{profile_image}}" alt="{{name}}’s profile image" />
+      </div>
 
-    <h1 class="author-profile__name">{{name}}</h1>
+      <div class="flex-shrink">
+        <h1 class="author-profile__name text-2xl text-red-700 font-serif mb-2">{{name}}</h1>
 
-    {{#if bio}}
-      <p class="author-profile__bio">{{bio}}</p>
-      {{else}}
-      <p class="author-profile__bio">
-        To let their work speak for itself, {{name}} has not written a bio.
-      </p>
-    {{/if}}
-    <div class="author-profile__meta">
+        {{#if bio}}
+          <p class="author-profile__bio text-base mb-4">{{bio}}</p>
+          {{else}}
+          <p class="author-profile__bio">
+            To let their work speak for itself, {{name}} has not written a bio.
+          </p>
+        {{/if}}
 
-      {{#if location}}
-        <span class="author-info__location inline-block">
-          Location: <strong>{{location}}</strong>
-        </span>
-        &ensp;
-      {{/if}}
+        <ul class="author-profile__meta text-sm">
 
-      {{#if website}}
-        <span class="author-info__website inline-block">
-          Website: <a href="{{website}}"><strong>{{website}}</strong></a>
-        </span>
-        &ensp;
-      {{/if}}
+          {{#if location}}
+            <li class="author-info__location">
+              Location: <strong>{{location}}</strong>
+            </li>
+          {{/if}}
 
-      <span class="author-info__rss  inline-block">
-        <a href="{{url}}rss">
-          <strong>RSS feed</strong>
-        </a> of posts by {{name}}&ensp;
-      </span>
-      &ensp;
+          <li class="author-info__rss mb-2">
+              <a href="{{url}}rss">
+                  <strong>RSS feed</strong>
+              </a> of posts by {{name}}&ensp;
+          </li>
 
-      {{#if twitter}}
-        <span class="author-info__twitter inline-block">
-          Twitter handle: <a href="{{twitter_url}}"><strong>{{name}}</strong></a>
-        </span>
-        &ensp;
-      {{/if}}
+          {{#if website}}
+            <li class="author-info__website">
+              Website: <a href="{{website}}"><strong>{{website}}</strong></a>
+            </li>
+          {{/if}}
 
-      {{#if facebook}}
-        <span class="author-info__facebook inline-block">
-          Facebook page: <a href="{{facebook_url}}"><strong>{{facebook_url}}</strong></a>
-        </span>
-        &ensp;
-      {{/if}}
+          {{#if twitter}}
+            <li class="author-info__twitter">
+              Twitter handle: <a href="{{twitter_url}}"><strong>{{name}}</strong></a>
+            </li>
+          {{/if}}
 
-      <br><br>
+          {{#if facebook}}
+            <li class="author-info__facebook">
+              Facebook page: <a href="{{facebook_url}}"><strong>{{facebook_url}}</strong></a>
+            </li>
+          {{/if}}
 
-      <span class="author-profile__stats inline-block">
-        {{name}}
-        {{plural ../pagination.total empty='hasn’t published any posts yet.' singular='has published <strong>% post</strong>:' plural='has published <strong>% posts</strong>:'}}
-      </span>
+        </ul>
 
-      <br><br>
-
+      </div>
     </div> {{! end author meta }}
 
   </section>
+
+  <div class="author-profile__stats container mt-4 sm:mt-6 text-base">
+    {{name}}
+    {{plural ../pagination.total empty='hasn’t published any posts yet.' singular='has published <strong class="text-red-700">% post</strong>.' plural='has published <strong class="text-red-700">% posts</strong>.'}}
+  </div>
 {{/author}}
 
+<hr class="container my-6 sm:my-8">
+
 {{! The main content area on the homepage }}
-<main class="content">
+<main class="content container">
 
   {{! The tag below includes the post loop - partials/loop.hbs }}
   {{> "loop"}}

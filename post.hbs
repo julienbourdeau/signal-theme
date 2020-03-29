@@ -2,18 +2,18 @@
 
 {{>content-header}}
 
-<main class="container content bg-red-200" id="content">
+<main class="container content mt-12" id="content">
 
   <article class="post {{post_class}}">
 
     {{#post}}
 
       <header class="post__header">
-        <h1 class="post__title">{{title}}</h1>
+        <h1 class="post__title mb-2 font-bold text-2xl sm:text-3xl md:text-4xl">{{title}}</h1>
 
-        <div class="post__meta">
+        <div class="post__meta text-gray-700 text-xs sm:text-sm md:text-base">
           Posted by {{#primary_author}}<a href="{{url}}">{{name}}</a>{{/primary_author}} on
-          <time class="post__date" datetime="{{date format='YYYY-MM-DD'}}">
+          <time class="post__date text-gray-800" datetime="{{date format='YYYY-MM-DD'}}">
             {{date format="MMMM Do, YYYY"}}.
           </time>
 

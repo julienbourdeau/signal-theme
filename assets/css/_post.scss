@@ -1,0 +1,95 @@
+.post {
+  p, ul, ol {
+    @apply text-sm font-light;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold font-serif;
+  }
+  h1:not(.post__title), h2, h3, h4, h5, h6 {
+    @apply mt-6 mb-4;
+  }
+  h2 {
+    @apply mt-12 text-xl;
+  }
+  h3 {
+    @apply mt-10 text-lg;
+  }
+  h4 {
+    @apply mt-8 text-base uppercase;
+  }
+  p {
+    @apply mb-4 mt-2;
+  }
+  p a, li a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    @apply text-red-700 underline;
+    &:hover {
+      @apply text-red-800;
+    }
+    &:active {
+      @apply text-red-500;
+    }
+  }
+  pre {
+    @apply my-6 font-mono py-3 px-2 bg-gray-100 rounded border border-gray-200 border-dotted overflow-scroll;
+  }
+  ul {
+    @apply list-disc;
+  }
+  ol {
+    @apply list-decimal;
+  }
+  ul, ol {
+    @apply ml-8;
+    li {
+      @apply mb-2;
+      }
+  }
+}
+
+@screen sm {
+  .post {
+    p, ul, ol {
+      @apply text-base;
+    }
+    h1:not(.post__title), h2, h3, h4, h5, h6 {
+      @apply mt-8 mb-5;
+    }
+    h2 {
+      @apply mt-16 text-2xl;
+    }
+    h3 {
+      @apply mt-12 text-xl;
+    }
+    h4 {
+      @apply text-lg uppercase;
+    }
+  }
+}
+
+@screen md {
+  .post {
+    p, ul, ol {
+      @apply text-lg;
+    }
+  }
+}
+
+
+.post__meta a {
+  @apply text-gray-800 underline;
+}
+
+.kg-gallery-container {
+  @apply flex flex-col;
+}
+.kg-gallery-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.kg-gallery-image {
+  @apply px-2;
+  flex: 1.5 1 0%;
+
+}

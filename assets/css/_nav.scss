@@ -1,0 +1,32 @@
+.nav {
+  @apply flex;
+  li {
+    @apply mr-3;
+    a {
+      @apply font-serif text-sm py-2 px-2 rounded-lg bg-gray-200;
+      &:hover {
+        @apply bg-red-200;
+      }
+      &:active {
+        @apply bg-red-300;
+      }
+    }
+  }
+}
+
+@screen sm {
+  .nav {
+    li {
+      a {
+        @apply text-base py-2 px-3 bg-transparent;
+      }
+    }
+  }
+}
+
+.pagination {
+  @apply flex justify-between flex-wrap;
+  .page-number {
+    @apply text-sm text-gray-700 font-normal font-serif;
+  }
+}

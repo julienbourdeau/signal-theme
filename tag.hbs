@@ -7,24 +7,22 @@
     <img class="tag-info__image" src="{{tag.feature_image}}" alt="Image for {{tag.name}} tag" />
   {{/if}}
 
-  <br><br>
+  <h1 class="tag-info__name text-2xl text-red-700 font-serif mb-2">
+    <span class="align-middle bg-gray-900 rounded shadow px-2 py-1 mr-2 font-serif text-xs uppercase font-bold text-white">tag</span>
+    {{tag.name}}
+    <span class="tag-info__meta text-base text-black pl-2">
+      {{plural pagination.total empty='There are no articles with this tag … how did you find it?!' singular='% post' plural='% posts'}}
+    </span>
+  </h1>
 
-  <span class="tag-info__intro">Posts Tagged:</span>
-  <h1 class="tag-info__name">{{tag.name}}</h1>
-
-  <p class="tag-info__description">
+  <p class="tag-info__description text-gray-700 text-sm">
     {{tag.description}} Subscribe to this  tag’s <a href="{{@site.url}}/tag/{{tag.slug}}/rss/">RSS feed</a> to get new {{tag.name}} posts as they’re written.
   </p>
 
-  <span class="tag-info__meta">
-    {{plural pagination.total empty='There are no articles with this tag … how did you find it?!' singular='A <strong>% post</strong> collection:' plural='A <strong>% post</strong> collection:'}}
-     </span>
-  </span>
-
-  <br><br>
-
 </section>
 
-<main class="content">
+<hr class="container my-6 sm:my-8">
+
+<main class="content container">
     {{> "loop"}}
 </main>

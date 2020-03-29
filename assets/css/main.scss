@@ -4,9 +4,9 @@
 /* purgecss end ignore */
 
 //@import "./_undefined-base.css";
+@import "./_nav";
+@import "./_misc";
+@import "./_post";
 
 @import "tailwindcss/utilities";
 
-.content p {
-  @apply mb-12;
-}

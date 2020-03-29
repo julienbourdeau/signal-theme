@@ -1,0 +1,15 @@
+.container {
+  @apply px-4 ;
+}
+
+@screen sm {
+  .container {
+    @apply px-6;
+  }
+}
+
+@screen md {
+  .container {
+    @apply px-0;
+  }
+}

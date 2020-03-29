@@ -1,53 +1,58 @@
-<article class="post-teaser {{post_class}} container">
-
-  {{#if feature_image}}
-    <div class="post-teaser__thumbnail" id="{{url}}-post-thumbnail">
-      <img class="post-card-image"
-        srcset="{{img_url feature_image size="xs"}} 400w,
-                {{img_url feature_image size="s"}} 600w,
-                {{img_url feature_image size="m"}} 800w"
-        src="{{img_url feature_image size="m"}}"
-        alt="{{title}}"
-      />
-    </div>
-  {{/if}}
+<article class="post-teaser mb-10 sm:mb-16">
 
   <div class="post-teaser__text-container">
     <header class="post-teaser__header">
 
-      <h2 class="post-teaser__title">
+      <h2 class="post-teaser__title text-2xl mb-2 font-serif">
         {{#if featured}}
           [Featured]
         {{/if}}
-        <a href="{{url}}">
+        <a href="{{url}}" class="">
           {{title}}
         </a>
       </h2>
     </header>
 
-    <div class="post-teaser__excerpt">
-      <p>
-        {{excerpt words="33"}}
-        <span class="read-more">…
-          <a class="read-more__link" href="{{url}}">
-            <span>read&nbsp;more&nbsp;&raquo;</span>
-          </a>
-        </span>
-      </p>
-    </div>
+    <div class="flex">
+      <div>
+        <div class="post-teaser__excerpt">
+          <p class="text-sm sm:text-base">
+            {{excerpt words="33"}}
+            <span class="read-more">…
+              <a class="read-more__link text-red-700" href="{{url}}">
+                <span>read&nbsp;more&nbsp;&raquo;</span>
+              </a>
+            </span>
+          </p>
+        </div>
 
-    <footer class="post-teaser__meta">
-      Posted by {{#primary_author}}<a href="{{url}}">{{name}}</a>{{/primary_author}} on
-      <time class="post-teaser__meta__date" datetime="{{date format='YYYY-MM-DD'}}">
-        {{date format="MMMM Do, YYYY"}}.
-      </time>
-      {{#if tags}}
-        <span class="post-teaser__meta__tags">
-          <!-- #{{tags separator=", #"}} -->
-          {{tags prefix="Tagged "}}
-        </span>
+        <footer class="post-teaser__meta text-xs sm:text-sm font-normal text-gray-700 font-serif mt-3">
+          Posted by {{#primary_author}}<a href="{{url}}">{{name}}</a>{{/primary_author}} on
+          <time class="post-teaser__meta__date" datetime="{{date format='YYYY-MM-DD'}}">
+            {{date format="MMMM Do, YYYY"}}.
+          </time>
+          {{#if tags}}
+            <span class="post-teaser__meta__tags">
+              <!-- #{{tags separator=", #"}} -->
+              {{tags prefix="Tagged "}}
+            </span>
+          {{/if}}
+        </footer>
+      </div>
+
+
+      {{#if feature_image}}
+          <div class="post-teaser__thumbnail w-40 sm:w-48 ml-3 sm:ml-6" id="{{url}}-post-thumbnail">
+              <img class="post-card-image"
+                   srcset="{{img_url feature_image size="xs"}} 400w,
+            {{img_url feature_image size="s"}} 600w,
+            {{img_url feature_image size="m"}} 800w"
+                   src="{{img_url feature_image size="m"}}"
+                   alt="{{title}}"
+              />
+          </div>
       {{/if}}
-    </footer>
+    </div>
  </div> <!-- end post-teaser__text-container -->
 </article>
-<br><br><br>
+
