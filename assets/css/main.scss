@@ -3,10 +3,16 @@
 @import "tailwindcss/components";
 /* purgecss end ignore */
 
-//@import "./_undefined-base.css";
 @import "./_nav";
 @import "./_misc";
 @import "./_post";
+
+em, i {
+  @apply italic;
+}
+strong, b {
+  @apply font-bold;
+}
 
 @import "tailwindcss/utilities";
 

@@ -2,6 +2,9 @@
   @apply flex;
   li {
     @apply mr-3;
+    &.nav-current a {
+      @apply bg-gray-200;
+    }
     a {
       @apply font-serif text-sm py-2 px-2 rounded-lg bg-gray-200;
       &:hover {

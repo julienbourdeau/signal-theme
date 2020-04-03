@@ -1,8 +1,8 @@
 {
   "name": "signal",
-  "description": "A tailwind minimal theme for tech writer using the Ghost blogging platform",
+  "description": "A tailwind CSS minimal Ghost theme for tech writers.",
   "demo": "http://github.com/julienbourdeau/signal",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "engines": {
     "ghost": ">=3.11.0",
     "ghost-api": "v3"
