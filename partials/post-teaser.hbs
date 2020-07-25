@@ -42,8 +42,8 @@
 
 
       {{#if feature_image}}
-          <div class="post-teaser__thumbnail w-40 sm:w-48 ml-3 sm:ml-6" id="{{url}}-post-thumbnail">
-              <img class="post-card-image"
+          <div class="post-teaser__thumbnail w-32 h-20 sm:w-48 sm:h-32 ml-3 sm:ml-6 flex-none" id="{{url}}-post-thumbnail">
+              <img class="post-card-image w-full object-cover"
                    srcset="{{img_url feature_image size="xs"}} 400w,
             {{img_url feature_image size="s"}} 600w,
             {{img_url feature_image size="m"}} 800w"
